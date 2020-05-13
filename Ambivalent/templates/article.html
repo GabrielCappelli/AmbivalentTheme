@@ -1,0 +1,50 @@
+{% extends "/base.html" %}
+{% block seo %}
+    <meta name="description" content="{{ article.summary|striptags|escape }}" />
+    <meta property="og:title" content="{{ article.title }}" />
+    <meta property="og:description" content="{{ article.summary|striptags|escape }}" />
+    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+    <meta property="og:locale" content="{{ LOCALE[0] }}" />
+    {% for locale in LOCALE[1:] %}
+    <meta property="og:locale:alternate" content="{{ locale }}" />
+    {% endfor %}
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="{{ article.date | strftime('%Y-%m-%d %H:%M:%S') }}" />
+    <meta property="article:modified_time" content="{{ article.date | strftime('%Y-%m-%d %H:%M:%S') }}" />
+    <meta property="article:section" content="{{ article.category.name }}"  />
+    {% for author in article.authors %}
+    <meta property="article:author" content="{{ SITEURL }}/{{ article.author.url }}" />
+    {% endfor %}
+    {% for tag in article.tags %}
+    <meta property="article:tag" content="{{ tag.name }}" />
+    {% endfor %}
+    {% if article.cover %}
+    <meta property="og:image" content="{{ main_siteurl or SITEURL }}/{{ article.cover }}" />
+    {% elif SITE_LOGO and SITE_LOGO.startswith(('http://', 'https://')) %}
+    <meta property="og:image" content="{{ SITE_LOGO }}" />
+    {% elif SITE_LOGO %}
+    <meta property="og:image" content="{{ main_siteurl or SITEURL }}/{{ SITE_LOGO }}" />
+    {% else %}
+    <meta property="og:image" content="{{ main_siteurl or SITEURL }}/{{ THEME_STATIC_DIR }}/img/ambivalent.svg" />
+    {% endif %}
+    {% if SITENAME %}
+    <meta property="og:site_name" content="{{ SITENAME }}" />
+    {% endif %}
+{% endblock seo %}
+{% block title %}
+    <title>{{ SITENAME }} - {{ article.title }}</title>
+{% endblock title %}
+{% block main %}
+<article>
+    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+    {% include '/components/post_meta.html' %}
+    {% if article.cover %}
+    <img src="{{ main_siteurl or SITEURL }}/{{ article.cover }}" alt=""/>
+    {% endif %}
+    {{ article.content }}
+</article>
+{% if DISQUS %}
+<div id="disqus_thread"></div>
+{% include '/components/disqus.html' %}
+{% endif %}
+{% endblock main %}

@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block title %}
+    <title>{{ SITENAME }} - {{ tag.name }}</title>
+{% endblock title %}
+{% block main %}
+    <h1>Posts tagged with {{ tag.name }}</h1>
+    {{ super() }}
+{% endblock main %}

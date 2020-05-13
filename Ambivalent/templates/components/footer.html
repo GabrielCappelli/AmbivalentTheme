@@ -1,0 +1,20 @@
+<footer>
+    <hr>
+    {% block footer %}
+    {% endblock footer %}
+    {% if SOCIAL_MEDIA_FOOTER %}
+    <div class="sm">
+        {% for ICON in SOCIAL_MEDIA %}
+        <a href="{{ICON[2]}}" aria-label="{{ICON[0]}}">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/{{ICON[1]}}" alt="{{ICON[0]}}"/>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if SHOW_POWERED_BY %}
+    {% include '/components/powered_by.html' %}
+    {% endif %}
+    {% if LICENSE == 'ccsa' %}
+    {% include '/components/ccsa_license.html' %}
+    {% endif %}
+</footer>

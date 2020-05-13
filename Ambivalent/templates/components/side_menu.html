@@ -1,0 +1,30 @@
+<nav id="side-menu">
+    <a class="side-menu-title" href="{{ SITEURL }}"> <b>{{SITENAME}}</b></a>
+    {% if SITE_LOGO %}
+    <img class="side-menu-logo" src="{{ SITE_LOGO }}" alt="logo" />
+    {% else %}
+    <img class="side-menu-logo" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/ambivalent.svg" alt="logo" />
+    {% endif %}
+    {% if SITE_DESCR %}
+    <p class="side-menu-descr">{{ SITE_DESCR }}</p>
+    {% endif %}
+    <p class="side-menu-links">
+        {% for link in SIDE_MENU_LINKS %}
+        <a href="{{ link[1] }}">
+            {{ link[0] }}
+        </a>
+        {% endfor %}
+    </p>
+    <div class="side-menu-theme-toggle">
+        <input class="theme-toggle" type="checkbox" onclick="toggleTheme()">
+    </div>
+    {% if extra_siteurls %}
+    <div class="side-menu-languages">
+        {% for lang, url in lang_siteurls.items() %}
+        &nbsp;
+        <a {% if lang == DEFAULT_LANG %} class="active" {% endif %} href="{{ url }}/{{ output_file }}" aria-label="Change language">{{ lang | lang_name }}</a>
+        &nbsp;
+        {% endfor %}
+    </div>
+    {% endif %}
+</nav>

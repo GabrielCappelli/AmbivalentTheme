@@ -1,0 +1,12 @@
+<div class="pagination">
+    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" aria-label="Previous page">
+        {% if articles_page.has_previous() %}
+        &laquo; Previous
+        {% endif %}
+    </a>
+    <a href="{{ SITEURL }}/{{ articles_next_page.url }}" aria-label="Next page">
+        {% if articles_page.has_next() %}
+        Next &raquo;
+        {% endif %}
+    </a>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     id="RSS"
+     viewBox="0 0 10 10" width="256" height="256">
+  <title>RSS</title>
+  <style type="text/css">
+    .button {stroke: none; fill: #f9a825;}
+    .symbol {stroke: none; fill: white;}
+  </style>
+  <circle class="button" cx="5" cy="5" r="5" />
+  <circle class="symbol" cx="3.5" cy="6.5" r="1" />
+  <path   class="symbol" d="m 2.5,4.5 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z" />
+  <path   class="symbol" d="m 2.5,2.5 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z" />
+</svg>

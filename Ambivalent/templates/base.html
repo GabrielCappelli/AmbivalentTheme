@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="theme-color" content="black">
+    <meta name="robots" content="index, follow" />
+    {% block seo %}
+    <meta name="description" content="{{ SITE_DESCR }}" />
+    <meta property="og:title" content="{{ SITENAME }}" />
+    <meta property="og:description" content="{{ SITE_DESCR }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
+    <meta property="og:locale" content="{{ LOCALE[0] }}" />
+    {% for locale in LOCALE[1:] %}
+    <meta property="og:locale:alternate" content="{{ locale }}" />
+    {% endfor %}
+    {% if SITE_LOGO and SITE_LOGO.startswith(('http://', 'https://')) %}
+    <meta property="og:image" content="{{ SITE_LOGO }}" />
+    {% elif SITE_LOGO %}
+    <meta property="og:image" content="{{ main_siteurl or SITEURL }}/{{ SITE_LOGO }}" />
+    {% else %}
+    <meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/ambivalent.svg" />
+    {% endif %}
+    {% endblock seo %}
+    <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/site.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
+    {% block title %}
+    <title>{{ SITENAME }}</title>
+    {% endblock title %}
+    {% if GOOGLE_ADSENSE %}
+    {% include '/components/google_adsense.html' %}
+    {% endif %}
+    {% if GOOGLE_ANALYTICS %}
+    {% include '/components/google_analytics.html' %}
+    {% endif %}
+</head>
+<body id="body">
+    {% include '/components/top_menu.html' %}
+    {% include '/components/side_menu.html' %}
+    <script>
+        let lightTheme = true;
+        let root = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark-theme' ||
+            (localStorage.getItem('theme') !== 'light-theme' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches))
+        {
+            document.documentElement.className = 'dark-theme';
+            lightTheme = false;
+            document.getElementsByClassName('theme-toggle')[0].checked = true;
+            document.getElementsByClassName('theme-toggle')[1].checked = true;
+        }
+        function toggleTheme() {
+            if(lightTheme)
+            {
+                root.className = 'dark-theme';
+                localStorage.setItem('theme', 'dark-theme');
+            }
+            else
+            {
+                root.className = 'light-theme';
+                localStorage.setItem('theme', 'light-theme');
+            }
+            lightTheme = !lightTheme;
+        }
+    </script>
+    <main>
+        {% block main %}
+        {% endblock main %}
+    </main>
+    {% include '/components/footer.html' %}
+    <script async src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/app.js" ></script>
+</body>
+</html>

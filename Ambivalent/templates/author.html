@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block seo %}{{ super() }}
+    <meta property="profile:first_name" content="{{ author.name.partition(' ')[0] }}" />
+    <meta property="profile:last_name" content="{{ author.name.partition(' ')[-1] }}" />
+    <meta property="profile:username" content="{{ author.slug }}" />
+{% endblock seo %}
+{% block title %}
+    <title>{{ SITENAME }} - {{ author.name }}</title>
+{% endblock title %}
+{% block main %}
+    <h1>Posts by {{ author.name }}</h1>
+    {{ super() }}
+{% endblock main %}

@@ -1,3 +1,12 @@
+# Pelican plugins
+
+plugins/
+webdist/
+
+# VS Code settings
+
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

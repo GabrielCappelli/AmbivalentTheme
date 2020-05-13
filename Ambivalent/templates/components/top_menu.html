@@ -1,0 +1,7 @@
+<nav id="top-menu">
+    <a onclick="toggleSideMenu()">☰</a>
+    {% if SITENAME %}
+    <a href="{{ SITEURL }}">{{SITENAME}}</a>
+    {% endif %}
+    <input class="theme-toggle" type="checkbox" onclick="toggleTheme()">
+</nav>
