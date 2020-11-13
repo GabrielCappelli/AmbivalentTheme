@@ -5,7 +5,7 @@ SITE_DESCR = "Welcome to Ambivalent's live demo!"
 SOCIAL_MEDIA = (
     ('LinkedIn', 'lkdin.svg', 'https://www.linkedin.com/in/gabrielcappelli/'),
     ('StackOverflow', 'stackoverflow.svg', 'https://stackoverflow.com/users/10013232/gabriel-cappelli?tab=profile'),
-    ('GitHub', 'github.svg', 'https://github.com/GabrielCappelli/Ambivalent'),
+    ('GitHub', 'github.svg', 'https://github.com/GabrielCappelli/AmbivalentTheme'),
     ('RSS', 'rss.svg', '/feeds/all.atom.xml'),
 )
 SOCIAL_MEDIA_FOOTER = True
