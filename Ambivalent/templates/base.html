@@ -20,8 +20,6 @@
     <meta property="og:image" content="{{ SITE_LOGO }}" />
     {% elif SITE_LOGO %}
     <meta property="og:image" content="{{ main_siteurl or SITEURL }}/{{ SITE_LOGO }}" />
-    {% else %}
-    <meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/ambivalent.svg" />
     {% endif %}
     {% endblock seo %}
     <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}">

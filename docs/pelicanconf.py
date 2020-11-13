@@ -1,5 +1,5 @@
 # Ambivalent theme settings
-SITE_LOGO = '' # Defaults to ambivalent  logo
+SITE_LOGO = 'https://ambivalent.gabrielcappelli.com/theme/img/ambivalent.svg'
 SITE_DESCR = "Welcome to Ambivalent's live demo!"
 
 SOCIAL_MEDIA = (
