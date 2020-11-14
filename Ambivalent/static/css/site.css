@@ -18,9 +18,9 @@
   }
 
 :root {
-    font-size: 22px;
+    font-size: 18px;
     font-family: Open Sans, sans-serif;
-    --top-menu-h: 4rem !important;
+    --top-menu-h: 3rem !important;
     --side-menu-w: 20vw !important;
     --transition-time: .5s;
 }
@@ -106,22 +106,23 @@ dl, dt, dd {
 }
 
 #top-menu a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 1rem;
 }
 
 .theme-toggle {
     -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
     appearance: none;
     outline: none;
     cursor: pointer;
     position: relative;
-    min-width: 80px;
-    min-height: 40px;
-    border-radius: 40px;
+    min-width: 55px;
+    min-height: 30px;
+    border-radius: 30px;
     margin: 0.5rem;
     transition: all var(--transition-time);
-    box-shadow: 0px 1px 4px 1px black;
+    box-shadow: 0px 1px 4px 1px var(--fc-p);
   }
 
   .theme-toggle:before {
@@ -129,9 +130,9 @@ dl, dt, dd {
     position: absolute;
     top: 5px;
     left: 5px;
-    min-height: 30px;
-    min-width: 30px;
-    border-radius: 45px;
+    min-height: 20px;
+    min-width: 20px;
+    border-radius: 35px;
     transition: all var(--transition-time);
     box-shadow: inset 0px 0px 10px #FF7330;
     background-color: #F7B721;
@@ -142,10 +143,10 @@ dl, dt, dd {
   }
 
   .theme-toggle:checked:before {
-    transform: translate(40px) rotate(-33deg);
+    transform: translate(25px) rotate(-33deg);
     transition: transform var(--transition-time);
     background-color: unset;
-    box-shadow: inset 10px 0px white;
+    box-shadow: inset 8px 0px white;
   }
 
 #side-menu {
@@ -172,8 +173,8 @@ dl, dt, dd {
     border-radius: 6rem;
     margin: 0.5rem;
     margin-top: 0;
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 66%;
+    max-height: 66%;
     border: solid 2px var(--bg-s);
 }
 
@@ -191,7 +192,7 @@ dl, dt, dd {
 
     .side-menu-links > a {
         margin: 0.2rem;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
 .side-menu-theme-toggle {
@@ -216,19 +217,22 @@ dl, dt, dd {
 }
 
 article {
-    margin: 0.5rem;
+    margin: 0.1rem;
     overflow-x: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+article p {
+    line-height: 150%;
 }
-h1 { font-size: 2rem;}
-h2 { font-size: 1.8rem;}
-h3 { font-size: 1.6rem;}
-h4 { font-size: 1.4rem;}
-h5 { font-size: 1.2rem;}
-h6 { font-size: 1rem;}
+
+.article-title { margin: 0; }
+
+h1 { font-size: 1.8rem;}
+h2 { font-size: 1.6rem;}
+h3 { font-size: 1.4rem;}
+h4 { font-size: 1.2rem;}
+h5 { font-size: 1.0rem;}
+h6 { font-size: 0.8rem;}
 
 table {
     border-collapse: collapse;

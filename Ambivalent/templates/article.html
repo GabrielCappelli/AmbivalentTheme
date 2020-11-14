@@ -34,7 +34,7 @@
 {% endblock title %}
 {% block main %}
 <article>
-    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+    <h1 class="article-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
     {% include '/components/post_meta.html' %}
     {% if article.cover %}
     <img src="{{ main_siteurl or SITEURL }}/{{ article.cover }}" alt=""/>
