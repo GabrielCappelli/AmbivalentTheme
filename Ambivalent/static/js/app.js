@@ -4,12 +4,12 @@ function toggleSideMenu() {
     if(isOpen)
     {
         document.getElementById("side-menu").style.left = "-100vw";
-        document.getElementById("body").addEventListener('ontouchmove', function(e) {e.preventDefault()}, false);
+        document.getElementById("body").style.overflowY = "auto";
     }
     else
     {
         document.getElementById("side-menu").style.left = "0";
-        document.getElementById("body").removeEventListener('ontouchmove', function(e) {e.preventDefault()});
+        document.getElementById("body").style.overflowY = "hidden";
     }
     isOpen = !isOpen;
 }

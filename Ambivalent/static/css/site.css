@@ -153,11 +153,12 @@ dl, dt, dd {
     display: flex;
     flex-direction: column;
     height: calc(100vh - var(--top-menu-h));
+    height: -webkit-fill-available;
     position: fixed;
     width: 100vw;
     left: -100vw;
     overflow-x: hidden;
-    overflow-y: auto;
+    overscroll-behavior: contain;
     background-color: var(--bg-t);
     margin-top: var(--top-menu-h);
     transition: all var(--transition-time) ease;
