@@ -193,6 +193,7 @@ dl, dt, dd {
 .side-menu-links {
     display: flex;
     flex-direction: column;
+    flex: 1 0 auto;
     margin: 0.75rem;
 }
 
