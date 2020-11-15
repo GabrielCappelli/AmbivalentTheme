@@ -63,11 +63,13 @@
             lightTheme = !lightTheme;
         }
     </script>
-    <main>
-        {% block main %}
-        {% endblock main %}
-    </main>
-    {% include '/components/footer.html' %}
+    <div id="main-panel">
+        <main>
+            {% block main %}
+            {% endblock main %}
+        </main>
+        {% include '/components/footer.html' %}
+    </div>
     <script async src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/app.js" ></script>
 </body>
 </html>
