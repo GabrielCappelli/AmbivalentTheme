@@ -26,9 +26,9 @@
 }
 
 .dark-theme {
-    --bg-p: #242b40;
-    --bg-s:#0a151f;
-    --bg-t: #242b40;
+    --bg-p: black;
+    --bg-s:black;
+    --bg-t: black;
     --fc-p: white;
     --fc-s: white;
     --lc-p: #FF8000;
@@ -81,6 +81,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-p);
+    box-shadow: inset 0px 5px 5px -5px var(--fc-p);
     color: var(--fc-p);
     padding: 0.75rem;
     transition: color, background-color var(--transition-time);
@@ -105,6 +106,7 @@ dl, dt, dd {
     width: 100vw;
     height: var(--top-menu-h);
     background-color: var(--bg-p);
+    box-shadow: inset 0px -5px 5px -5px var(--fc-p);
     z-index: 999;
 }
 
@@ -339,10 +341,6 @@ blockquote p {
     max-width: 2rem;
 }
 
-hr {
-    display: none;
-}
-
 @media only screen and (min-width: 1025px) {
 
     #top-menu {
@@ -355,6 +353,7 @@ hr {
         width: var(--side-menu-w);
         height: 100vh;
         padding-top: 1rem;
+        box-shadow: inset -5px 0px 5px -5px var(--fc-p);
     }
 
     .side-menu-title {
@@ -394,11 +393,6 @@ hr {
         background: unset;
     }
 
-    hr {
-        display: block;
-        width: 95%;
-        margin: 1rem;
-    }
 
     a:hover {
         color: var(--lc-p-hover);
