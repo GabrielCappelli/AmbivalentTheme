@@ -24,7 +24,8 @@
     {% endblock seo %}
     <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/site.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
+    <link rel="preload" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet"href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css"></noscript>
     {% block title %}
     <title>{{ SITENAME }}</title>
     {% endblock title %}
