@@ -49,7 +49,6 @@ DAY_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/index.html'
 DATE_FORMATS = {
     'en': ('en_US.utf8', '%d %B %Y'),
     'pt_br': ('pt_BR.utf8', '%d %B %Y'),
-    'it_it': ('it_IT.utf8', '%d %B %Y'),
 }
 
 I18N_SUBSITES = {
@@ -64,23 +63,11 @@ I18N_SUBSITES = {
                 ('Página de Exemplo', '/pt_br/pages/sample-page/index.html')
             )
         },
-    'it_it': {
-        'SITE_DESCR': 'Benvenuti nella demo live di Ambivalent!',
-        'SIDE_MENU_LINKS': (
-                ('Inizio', '/it_it/'),
-                ('Autori', '/it_it/authors.html'),
-                ('Archivio', '/it_it/archives.html'),
-                ('Categorie', '/it_it/categories.html'),
-                ('Tags', '/it_it/tags.html'),
-                ('Pagina di Esempio', '/it_it/pages/sample-page/index.html')
-            )
-        }
     }
 
 languages_lookup = {
     'en': 'English',
     'pt_br': 'Português',
-    'it_it': 'Italiano',
 }
 
 JINJA_FILTERS = { 'lang_name': lambda x: languages_lookup.get(x), }
