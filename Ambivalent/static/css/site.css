@@ -62,15 +62,18 @@ body {
 }
 
 #main-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     overflow-y: auto;
     overflow-x: hidden;
     margin-top: var(--top-menu-h);
+    height: 100%;
 }
 
 main {
-    display: flex;
+    flex-grow: 1;
     padding: 0.5rem;
-    flex-direction: column;
     color: var(--fc-s);
     transition: color var(--transition-time);
 }
@@ -382,7 +385,6 @@ blockquote p {
 
     main {
         padding-top: 1rem;
-        margin-right: var(--side-menu-w);
     }
 
     article {
@@ -390,7 +392,6 @@ blockquote p {
     }
 
     footer {
-        margin-right: var(--side-menu-w);
         background: unset;
     }
 
