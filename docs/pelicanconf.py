@@ -4,6 +4,8 @@ THEME = 'Ambivalent'
 SITE_LOGO = '/theme/img/ambivalent.png'
 SITE_DESCR = "Welcome to Ambivalent's live demo!"
 
+GITHUB_SPONSOR = "GabrielCappelli"
+
 SOCIAL_MEDIA = (
     ('LinkedIn', 'lkdin.svg', 'https://www.linkedin.com/in/gabrielcappelli/'),
     ('StackOverflow', 'stackoverflow.svg', 'https://stackoverflow.com/users/10013232/gabriel-cappelli?tab=profile'),
@@ -13,12 +15,12 @@ SOCIAL_MEDIA = (
 SOCIAL_MEDIA_FOOTER = True
 
 SIDE_MENU_LINKS = (
-    ('Home', '/'),
-    ('Authors', '/authors.html'),
-    ('Archives', '/archives.html'),
-    ('Categories', '/categories.html'),
-    ('Tags', '/tags.html'),
-    ('Sample Page', '/pages/sample-page/index.html'),
+    ('HOME', '/'),
+    ('AUTHORS', '/authors.html'),
+    ('ARCHIVES', '/archives.html'),
+    ('CATEGORIES', '/categories.html'),
+    ('TAGS', '/tags.html'),
+    ('SAMPLE PAGE', '/pages/sample-page/index.html'),
 )
 
 LICENSE = 'ccsa'

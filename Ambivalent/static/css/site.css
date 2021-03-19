@@ -20,7 +20,7 @@
 :root {
     font-size: 18px;
     font-family: Open Sans, sans-serif;
-    --top-menu-h: 3rem !important;
+    --top-menu-h: 3.5rem !important;
     --side-menu-w: 20vw !important;
     --transition-time: .5s;
 }
@@ -32,7 +32,7 @@
     --fc-p: white;
     --fc-s: white;
     --lc-p: #FF8000;
-    --lc-p-hover: #73499c;
+    --lc-p-hover: #002990;
     --svg-filter: invert();
 }
 
@@ -42,7 +42,7 @@
     --bg-t: #E4E8F3;
     --fc-p: black;
     --fc-s: black;
-    --lc-p: #73499c;
+    --lc-p: #002990;
     --lc-p-hover: #f9a825;
     --svg-filter: none;
 }
@@ -160,6 +160,7 @@ dl, dt, dd {
 #side-menu {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: calc(100vh - var(--top-menu-h));
     height: -webkit-fill-available;
     position: fixed;
@@ -177,16 +178,6 @@ dl, dt, dd {
     display: none;
 }
 
-.side-menu-logo {
-    align-self: center;
-    border-radius: 6rem;
-    margin: 0.5rem;
-    margin-top: 0;
-    max-width: 66%;
-    max-height: 66%;
-    border: solid 2px var(--bg-s);
-}
-
 .side-menu-descr {
     text-align: center;
     margin: 0.5rem;
@@ -197,12 +188,13 @@ dl, dt, dd {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    margin: 0.75rem;
 }
 
     .side-menu-links > a {
-        margin: 0.2rem;
-        font-size: 1.2rem;
+        margin: 0.3rem;
+        font-size: 1.0rem;
+        font-family: 'bgBold',arial,helvetica,sans-serif;
+        text-align: center;
     }
 
 .side-menu-theme-toggle {
@@ -213,8 +205,7 @@ dl, dt, dd {
     font-size: 0.75rem;
     display: flex;
     justify-content: center;
-    margin-top: auto;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .side-menu-languages .active{
@@ -359,23 +350,23 @@ blockquote p {
         padding-top: 1rem;
         box-shadow: inset -5px 0px 5px -5px var(--fc-p);
     }
+    
+    .side-menu-logo {
+        max-width: 60%;
+        max-height: 60%;
+    }
 
     .side-menu-title {
         display: block;
         align-self: center;
         text-align: center;
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
     }
 
     .side-menu-theme-toggle {
         display: block;
         align-self: center;
-        margin-top: auto;
-        margin-bottom: 0.25rem;
-    }
-
-    .side-menu-languages {
-        margin-top: 0;
+        margin: 0.25rem;
     }
 
     #main-panel {
@@ -388,7 +379,7 @@ blockquote p {
     }
 
     article {
-        margin: 0rem 1rem;
+        margin: 0rem 2rem;
     }
 
     footer {

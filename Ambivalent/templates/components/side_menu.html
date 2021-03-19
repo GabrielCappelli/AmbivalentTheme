@@ -13,6 +13,9 @@
         </a>
         {% endfor %}
     </p>
+    {% if GITHUB_SPONSOR %}
+    {% include '/components/github_sponsor.html' %}
+    {% endif %}
     <div class="side-menu-theme-toggle">
         <input class="theme-toggle" type="checkbox" onclick="toggleTheme()">
     </div>
