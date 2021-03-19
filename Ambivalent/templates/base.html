@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}" class="light-theme">
 <head>
+    {% if GOOGLE_TAG_MANAGER %}
+    {% include '/components/google_tag_manager.html' %}
+    {% endif %}
+    {% if GOOGLE_ANALYTICS %}
+    {% include '/components/google_analytics.html' %}
+    {% endif %}
+    {% if GOOGLE_ADSENSE %}
+    {% include '/components/google_adsense.html' %}
+    {% endif %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -29,12 +38,6 @@
     {% block title %}
     <title>{{ SITENAME }}</title>
     {% endblock title %}
-    {% if GOOGLE_ADSENSE %}
-    {% include '/components/google_adsense.html' %}
-    {% endif %}
-    {% if GOOGLE_ANALYTICS %}
-    {% include '/components/google_analytics.html' %}
-    {% endif %}
 </head>
 <body id="body">
     {% include '/components/top_menu.html' %}
