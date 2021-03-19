@@ -1,4 +1,6 @@
 # Ambivalent theme settings
+THEME = 'Ambivalent'
+
 SITE_LOGO = 'https://ambivalent.gabrielcappelli.com/theme/img/ambivalent.svg'
 SITE_DESCR = "Welcome to Ambivalent's live demo!"
 
@@ -47,10 +49,6 @@ MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/index.html'
 
 # Locale settings
-DATE_FORMATS = {
-    'en': ('en_US.utf8', '%d %B %Y'),
-    'pt_br': ('pt_BR.utf8', '%d %B %Y'),
-}
 
 I18N_SUBSITES = {
     'pt_br': {
