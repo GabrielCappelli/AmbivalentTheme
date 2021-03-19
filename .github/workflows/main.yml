@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: GabrielCappelli/gh-pages-pelican-action@0.1.5
+      - uses: GabrielCappelli/gh-pages-pelican-action@master
         env:
           PELICAN_CONTENT_FOLDER: ./docs/content/
           PELICAN_CONFIG_FILE : ./docs/pelicanconf.py
