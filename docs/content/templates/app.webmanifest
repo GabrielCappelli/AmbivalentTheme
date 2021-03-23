@@ -1,0 +1,11 @@
+{
+    "theme_color": "#FF8000",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "name": "{{ SITENAME }}",
+    "short_name": "{{ SITENAME }}",
+    "description": "{{ WEB_MANIFEST_DESCR }}",
+    "icons": {{ WEB_MANIFEST_ICONS | tojson }}
+}

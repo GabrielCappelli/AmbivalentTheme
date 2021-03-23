@@ -33,6 +33,12 @@
     {% endblock seo %}
     <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/site.css">
+    {% if WEB_MANIFEST %}
+    <link rel="manifest" href="{{ SITEURL }}/{{ WEB_MANIFEST }}" crossorigin="use-credentials">
+    {% endif %}
+    {% if APPLE_TOUCH_ICON %}
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ APPLE_TOUCH_ICON }}">
+    {% endif %}
     <link rel="preload" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet"href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css"></noscript>
     {% block title %}
@@ -75,5 +81,8 @@
         {% include '/components/footer.html' %}
     </div>
     <script async src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/app.js" ></script>
+    {% if SERVICE_WORKER %}
+    <script>if('serviceWorker' in navigator) { navigator.serviceWorker.register('{{ SITEURL }}/{{SERVICE_WORKER}}'); };</script>
+    {% endif %}
 </body>
 </html>

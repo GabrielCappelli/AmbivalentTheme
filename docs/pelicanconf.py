@@ -16,10 +16,10 @@ SOCIAL_MEDIA_FOOTER = True
 
 SIDE_MENU_LINKS = (
     ('HOME', '/'),
+    ('TAGS', '/tags.html'),
     ('AUTHORS', '/authors.html'),
     ('ARCHIVES', '/archives.html'),
     ('CATEGORIES', '/categories.html'),
-    ('TAGS', '/tags.html'),
     ('SAMPLE PAGE', '/pages/sample-page/index.html'),
 )
 
@@ -32,6 +32,67 @@ GOOGLE_TAG_MANAGER = 'GTM-TBCDL49'
 
 DISQUS = 'ambivalent'
 
+# Settings for Service Worker
+from uuid import uuid4
+
+SERVICE_WORKER = 'sw.js'
+
+CACHE_VERSION = uuid4()
+OFFLINE_PAGE = '/offline.html'
+CONTENT_TO_CACHE = [
+  '/offline.html',
+  '/app.webmanifest',
+  'favicon.ico',
+  'icon-192x192.png',
+  'icon-256x256.png',
+  'icon-384x384.png',
+  'icon-512x512.png',
+  '/theme/css/pygment.css',
+  '/theme/css/site.css',
+  '/theme/img/ambivalent.png',
+  '/theme/img/calendar.svg',
+  '/theme/img/author.svg',
+  '/theme/img/clock.svg',
+  '/images/helloworld.webp',
+  '/theme/img/lkdin.svg',
+  '/theme/img/stackoverflow.svg',
+  '/theme/img/github.svg',
+  '/theme/img/rss.svg',
+  '/theme/js/app.js',
+]
+
+WEB_MANIFEST = 'app.webmanifest'
+WEB_MANIFEST_DESCR = 'Ambivalents live demo'
+WEB_MANIFEST_ICONS = [
+    {
+        "src": "/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "/icon-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+    },
+    {
+        "src": "/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+    }
+]
+
+APPLE_TOUCH_ICON = 'icon-192x192.png'
+
+TEMPLATE_PAGES = {
+    'templates/sw.js': SERVICE_WORKER,
+    'templates/app.webmanifest': WEB_MANIFEST,
+}
+
 # Pelican settings
 # Basic settings
 SITEURL = 'https://ambivalent.gabrielcappelli.com'
@@ -39,10 +100,16 @@ RELATIVE_URLS = False
 SITENAME = 'Ambivalent'
 PATH = 'content'
 OUTPUT_PATH = 'webdist/'
-STATIC_PATHS = ['images', 'extra/robots.txt',]
+STATIC_PATHS = ['images', 'extra',]
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
-    }
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/icon-192x192.png': {'path': 'icon-192x192.png'},
+    'extra/icon-256x256.png': {'path': 'icon-256x256.png'},
+    'extra/icon-384x384.png': {'path': 'icon-384x384.png'},
+    'extra/icon-512x512.png': {'path': 'icon-512x512.png'},
+}
 
 DEFAULT_PAGINATION = 5
 
