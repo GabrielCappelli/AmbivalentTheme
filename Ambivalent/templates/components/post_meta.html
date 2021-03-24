@@ -7,7 +7,7 @@
         <img class="post-meta-svg" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/author.svg" alt="date" />
         {{ article.author }}
     </span>
-    {% if article.readtime.minutes >= 0 %}
+    {% if article.readtime and article.readtime.minutes >= 0 %}
     <span class="post-meta">
         <img class="post-meta-svg" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/clock.svg" alt="date" />
         {{ article.readtime.minutes }} mins
