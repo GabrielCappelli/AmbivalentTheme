@@ -1,6 +1,4 @@
 # Ambivalent theme settings
-THEME = 'Ambivalent'
-
 SITE_LOGO = '/theme/img/ambivalent.png'
 SITE_DESCR = "Welcome to Ambivalent's live demo!"
 
