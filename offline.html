@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+<head>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {'ad_storage': 'denied', 'analytics_storage': 'denied'});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBCDL49');
+</script>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="theme-color" content="black">
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Welcome to Ambivalent's live demo!" />
+    <meta property="og:title" content="Ambivalent" />
+    <meta property="og:description" content="Welcome to Ambivalent's live demo!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ambivalent.gabrielcappelli.com/offline.html" />
+    <meta property="og:locale" content="" />
+    <meta property="og:image" content="https://ambivalent.gabrielcappelli.com//theme/img/ambivalent.png" />
+    <link rel="canonical" href="https://ambivalent.gabrielcappelli.com/offline.html">
+    <link rel="stylesheet" type="text/css" href="https://ambivalent.gabrielcappelli.com/theme/css/site.css">
+    <link rel="manifest" href="https://ambivalent.gabrielcappelli.com/app.webmanifest" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="https://ambivalent.gabrielcappelli.com/icon-192x192.png">
+    <link rel="preload" href="https://ambivalent.gabrielcappelli.com/theme/css/pygment.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet"href="https://ambivalent.gabrielcappelli.com/theme/css/pygment.css"></noscript>
+<title>Ambivalent - Offline</title>
+</head>
+<body id="body">
+<nav id="top-menu">
+    <a onclick="toggleSideMenu()">☰</a>
+    <a href="https://ambivalent.gabrielcappelli.com">Ambivalent</a>
+    <input aria-label="Toggle light/dark theme" class="theme-toggle" type="checkbox" onclick="toggleTheme()">
+</nav><nav id="side-menu">
+    <a class="side-menu-title" href="https://ambivalent.gabrielcappelli.com"> <b>Ambivalent</b></a>
+    <img class="side-menu-logo" src="/theme/img/ambivalent.png" alt="logo" />
+    <p class="side-menu-descr">Welcome to Ambivalent's live demo!</p>
+    <p class="side-menu-links">
+        <a href="/">
+            HOME
+        </a>
+        <a href="/tags.html">
+            TAGS
+        </a>
+        <a href="/authors.html">
+            AUTHORS
+        </a>
+        <a href="/archives.html">
+            ARCHIVES
+        </a>
+        <a href="/categories.html">
+            CATEGORIES
+        </a>
+        <a href="/pages/sample-page/index.html">
+            SAMPLE PAGE
+        </a>
+    </p>
+<iframe src="https://github.com/sponsors/GabrielCappelli/button" title="Sponsor GabrielCappelli" height="35" width="116" style="border: 0; margin: 1rem"></iframe>    <div class="side-menu-theme-toggle">
+        <input aria-label="Toggle light/dark theme" class="theme-toggle" type="checkbox" onclick="toggleTheme()">
+    </div>
+    <div class="side-menu-languages">
+        &nbsp;
+        <a  class="active"  href="https://ambivalent.gabrielcappelli.com/offline.html" aria-label="Change language">English</a>
+        &nbsp;
+        &nbsp;
+        <a  href="https://ambivalent.gabrielcappelli.com/pt_br/offline.html" aria-label="Change language">Português</a>
+        &nbsp;
+    </div>
+</nav>    <script>
+        let lightTheme = true;
+        let root = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark-theme' ||
+            (localStorage.getItem('theme') !== 'light-theme' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches))
+        {
+            document.documentElement.className = 'dark-theme';
+            lightTheme = false;
+            document.getElementsByClassName('theme-toggle')[0].checked = true;
+            document.getElementsByClassName('theme-toggle')[1].checked = true;
+        }
+        function toggleTheme() {
+            if(lightTheme)
+            {
+                root.className = 'dark-theme';
+                localStorage.setItem('theme', 'dark-theme');
+            }
+            else
+            {
+                root.className = 'light-theme';
+                localStorage.setItem('theme', 'light-theme');
+            }
+            lightTheme = !lightTheme;
+        }
+    </script>
+    <div id="main-panel">
+        <main>
+<article>
+    <h1>Whoops, seems like you're offline</h1>
+    <p>You can still read these pages that are cached:</p>
+    <ul id='cache-pages-list'>
+    </ul>
+</article>
+
+<script>
+    (async () => {
+        const cache_pages_list = document.getElementById('cache-pages-list');
+        const NAV_CACHE = 'nav_cache';
+        cache = await window.caches.open(NAV_CACHE);
+        const results = await cache.matchAll();
+        results.flat().forEach(async (response) => {
+            const dataAsString = await response.text();
+            const html = document
+                .createRange()
+                .createContextualFragment(dataAsString);
+            const title = html
+                .querySelector("title")
+                .textContent.trim();
+            cache_pages_list.insertAdjacentHTML(
+                "beforeend",
+                `<li><a href="${response.url}">${title}</a></li>`
+            );
+        });
+    })();
+</script>
+
+        </main>
+<footer>
+    <div class="sm">
+        <a href="https://www.linkedin.com/in/gabrielcappelli/" aria-label="LinkedIn">
+            <img src="https://ambivalent.gabrielcappelli.com/theme/img/lkdin.svg" alt="LinkedIn"/>
+        </a>
+        <a href="https://stackoverflow.com/users/10013232/gabriel-cappelli?tab=profile" aria-label="StackOverflow">
+            <img src="https://ambivalent.gabrielcappelli.com/theme/img/stackoverflow.svg" alt="StackOverflow"/>
+        </a>
+        <a href="https://github.com/GabrielCappelli/AmbivalentTheme" aria-label="GitHub">
+            <img src="https://ambivalent.gabrielcappelli.com/theme/img/github.svg" alt="GitHub"/>
+        </a>
+        <a href="/feeds/all.atom.xml" aria-label="RSS">
+            <img src="https://ambivalent.gabrielcappelli.com/theme/img/rss.svg" alt="RSS"/>
+        </a>
+    </div>
+<p class="powered-by">
+    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> using <a href="https://github.com/GabrielCappelli/Ambivalent">Ambivalent</a> theme
+</p><p class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+    </a>
+    This work is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p></footer>    </div>
+    <script async src="https://ambivalent.gabrielcappelli.com/theme/js/app.js" ></script>
+    <script>if('serviceWorker' in navigator) { navigator.serviceWorker.register('https://ambivalent.gabrielcappelli.com/sw.js'); };</script>
+</body>
+</html>

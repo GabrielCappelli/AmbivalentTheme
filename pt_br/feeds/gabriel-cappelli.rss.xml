@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Ambivalent - Gabriel Cappelli</title><link>https://ambivalent.gabrielcappelli.com/pt_br/</link><description></description><lastBuildDate>Fri, 26 Mar 2021 00:56:00 +0000</lastBuildDate><item><title>Ambivalent 0.4.0</title><link>https://ambivalent.gabrielcappelli.com/pt_br/posts/2021/03/26/ambivalent-0.4.0/</link><description>&lt;p&gt;Mudancas para que a página offline liste todas páginas cacheadas que usuários podem ler sem internet.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Cappelli</dc:creator><pubDate>Fri, 26 Mar 2021 00:56:00 +0000</pubDate><guid isPermaLink="false">tag:ambivalent.gabrielcappelli.com,2021-03-26:/pt_br/posts/2021/03/26/ambivalent-0.4.0/</guid><category>News</category><category>Ambivalent</category></item><item><title>Ambivalent 0.3.0</title><link>https://ambivalent.gabrielcappelli.com/pt_br/posts/2021/03/23/ambivalent-0.3.0/</link><description>&lt;p&gt;Adiciona Google Tag Manager, GitHub sponsors e este tema agora pode ser um Progressive Web Application.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Cappelli</dc:creator><pubDate>Tue, 23 Mar 2021 23:56:00 +0000</pubDate><guid isPermaLink="false">tag:ambivalent.gabrielcappelli.com,2021-03-23:/pt_br/posts/2021/03/23/ambivalent-0.3.0/</guid><category>News</category><category>Ambivalent</category></item><item><title>Ambivalent 0.2.0</title><link>https://ambivalent.gabrielcappelli.com/pt_br/posts/2020/11/21/ambivalent-0.2.0/</link><description>&lt;p&gt;Troca o tema escuro para AMOLED, adiciona scrollbars customizadas e outras pequenas mudancas.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Cappelli</dc:creator><pubDate>Sat, 21 Nov 2020 16:00:00 +0000</pubDate><guid isPermaLink="false">tag:ambivalent.gabrielcappelli.com,2020-11-21:/pt_br/posts/2020/11/21/ambivalent-0.2.0/</guid><category>News</category><category>Ambivalent</category></item><item><title>Ambivalent 0.1.0</title><link>https://ambivalent.gabrielcappelli.com/pt_br/posts/2020/04/01/ambivalent-0.1.0/</link><description>&lt;p&gt;Essa é a primeira release do Ambivalent! Ambivalent é um tema leve para Pelican,
+com um design responsivo mobile first e temas claro/escuro.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Cappelli</dc:creator><pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:ambivalent.gabrielcappelli.com,2020-04-01:/pt_br/posts/2020/04/01/ambivalent-0.1.0/</guid><category>News</category><category>Ambivalent</category></item><item><title>Sample Post</title><link>https://ambivalent.gabrielcappelli.com/pt_br/posts/2020/03/01/sample-post/</link><description>&lt;h1&gt;Post de Exemplo&lt;/h1&gt;
+&lt;p&gt;Essa é um post de exemplo.&lt;/p&gt;
+&lt;h2&gt;Code Syntax Highlight&lt;/h2&gt;
+&lt;p&gt;Python&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Foo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;pass&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;pass&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bar&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Csharp&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Foo&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="nf"&gt;Foo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;H1&lt;/h1&gt;
+&lt;h2&gt;H2&lt;/h2&gt;
+&lt;h3&gt;H3&lt;/h3&gt;
+&lt;h4&gt;H4&lt;/h4&gt;
+&lt;h5&gt;H5&lt;/h5&gt;
+&lt;h6&gt;H6 …&lt;/h6&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Cappelli</dc:creator><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:ambivalent.gabrielcappelli.com,2020-03-01:/pt_br/posts/2020/03/01/sample-post/</guid><category>posts</category></item></channel></rss>

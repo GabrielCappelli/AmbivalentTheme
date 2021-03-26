@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ambivalent - News</title><link href="https://ambivalent.gabrielcappelli.com/pt_br/" rel="alternate"></link><link href="https://ambivalent.gabrielcappelli.com/feeds/news.atom.xml" rel="self"></link><id>https://ambivalent.gabrielcappelli.com/pt_br/</id><updated>2021-03-26T00:56:00+00:00</updated><entry><title>Ambivalent 0.4.0</title><link href="https://ambivalent.gabrielcappelli.com/pt_br/posts/2021/03/26/ambivalent-0.4.0/" rel="alternate"></link><published>2021-03-26T00:56:00+00:00</published><updated>2021-03-26T00:56:00+00:00</updated><author><name>Gabriel Cappelli</name></author><id>tag:ambivalent.gabrielcappelli.com,2021-03-26:/pt_br/posts/2021/03/26/ambivalent-0.4.0/</id><summary type="html">&lt;p&gt;Mudancas para que a página offline liste todas páginas cacheadas que usuários podem ler sem internet.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Mudancas para que a página offline liste todas páginas cacheadas que usuários podem ler sem internet. Essa página pode ser acessada &lt;a href="/offline.html"&gt;diretamente&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Move os templates necessários para o site ser uma PWA para dentro do tema&lt;/li&gt;
+&lt;li&gt;Faz cache das páginas html&lt;/li&gt;
+&lt;li&gt;Página offline extrai lista de páginas que usuários podem ler sem internet.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="News"></category><category term="Ambivalent"></category></entry><entry><title>Ambivalent 0.3.0</title><link href="https://ambivalent.gabrielcappelli.com/pt_br/posts/2021/03/23/ambivalent-0.3.0/" rel="alternate"></link><published>2021-03-23T23:56:00+00:00</published><updated>2021-03-23T23:56:00+00:00</updated><author><name>Gabriel Cappelli</name></author><id>tag:ambivalent.gabrielcappelli.com,2021-03-23:/pt_br/posts/2021/03/23/ambivalent-0.3.0/</id><summary type="html">&lt;p&gt;Adiciona Google Tag Manager, GitHub sponsors e este tema agora pode ser um Progressive Web Application.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Adiciona Google Tag Manager, GitHub sponsors e este tema agora pode ser um Progressive Web Application.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Adiciona Google Tag Manager&lt;/li&gt;
+&lt;li&gt;Adiciona GitHub Sponsors&lt;/li&gt;
+&lt;li&gt;Adiciona aria-label ao theme toggler &lt;/li&gt;
+&lt;li&gt;Permite que o painel principal use toda tela disponivel (desktop)&lt;/li&gt;
+&lt;li&gt;Muda o texto para read post ao invés de read more &lt;/li&gt;
+&lt;li&gt;Novo logo para o website&lt;/li&gt;
+&lt;/ul&gt;</content><category term="News"></category><category term="Ambivalent"></category></entry><entry><title>Ambivalent 0.2.0</title><link href="https://ambivalent.gabrielcappelli.com/pt_br/posts/2020/11/21/ambivalent-0.2.0/" rel="alternate"></link><published>2020-11-21T16:00:00+00:00</published><updated>2020-11-21T16:00:00+00:00</updated><author><name>Gabriel Cappelli</name></author><id>tag:ambivalent.gabrielcappelli.com,2020-11-21:/pt_br/posts/2020/11/21/ambivalent-0.2.0/</id><summary type="html">&lt;p&gt;Troca o tema escuro para AMOLED, adiciona scrollbars customizadas e outras pequenas mudancas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nessa release nos tentamos fazer o site um pouco mais bonito, melhoramos o carregamento da pagina e adicionamos algumas melhorias para o Safari.&lt;/p&gt;
+&lt;p&gt;Aqui esta a lista de mudanças:&lt;/p&gt;
+&lt;h2&gt;Mudanças&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Usa AMOLED no dark theme&lt;/li&gt;
+&lt;li&gt;Adiciona scrollbar customizada para browsers webkit webkit &lt;/li&gt;
+&lt;li&gt;Remove SITE_LOGO padrão&lt;/li&gt;
+&lt;li&gt;Melhoria no carregamento da pagina delegando pygments.css&lt;/li&gt;
+&lt;li&gt;Arruma o link para a página do GitHub&lt;/li&gt;
+&lt;li&gt;Arruma o scroll do side menu scrolling no mobile&lt;/li&gt;
+&lt;li&gt;Arruma bugs no Safari&lt;/li&gt;
+&lt;/ul&gt;</content><category term="News"></category><category term="Ambivalent"></category></entry><entry><title>Ambivalent 0.1.0</title><link href="https://ambivalent.gabrielcappelli.com/pt_br/posts/2020/04/01/ambivalent-0.1.0/" rel="alternate"></link><published>2020-04-01T00:00:00+00:00</published><updated>2020-04-01T00:00:00+00:00</updated><author><name>Gabriel Cappelli</name></author><id>tag:ambivalent.gabrielcappelli.com,2020-04-01:/pt_br/posts/2020/04/01/ambivalent-0.1.0/</id><summary type="html">&lt;p&gt;Essa é a primeira release do Ambivalent! Ambivalent é um tema leve para Pelican,
+com um design responsivo mobile first e temas claro/escuro.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ambivalent é um tema leve para Pelican.&lt;/p&gt;
+&lt;p&gt;Eu planejo usar o Ambivalent no meu próprio &lt;a href="" title="https://blog.gabrielcappelli.com"&gt;blog&lt;/a&gt; e vou adicionar mais features conforme a necessidade.&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Leve&lt;/li&gt;
+&lt;li&gt;Design responsivo&lt;/li&gt;
+&lt;li&gt;Temas claro e escuro&lt;/li&gt;
+&lt;li&gt;Melhores práticas de SEO&lt;/li&gt;
+&lt;li&gt;Integração com Disqus&lt;/li&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;li&gt;Google AdSense&lt;/li&gt;
+&lt;li&gt;Suporte a multiplas linguagens via &lt;a href="https://github.com/getpelican/pelican-plugins/blob/master/i18n_subsites"&gt;i18n_subsites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tempo de leitura via &lt;a href="https://github.com/getpelican/pelican-plugins/blob/master/readtime/"&gt;readtime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sitemap via &lt;a href="https://github.com/getpelican/pelican-plugins/blob/master/sitemap/"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="News"></category><category term="Ambivalent"></category></entry></feed>
