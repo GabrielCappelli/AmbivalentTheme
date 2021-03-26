@@ -1,5 +1,5 @@
 const APP_SHELL = {{ APP_SHELL }}
-const APP_VERSION = '{{ THEME_VERSION }}'
+const APP_VERSION = '{{ APP_VERSION }}'
 const APP_CACHE_PREFIX = 'app_shell_cache_'
 const APP_SHELL_CACHE = APP_CACHE_PREFIX + APP_VERSION;
 const NAV_CACHE = 'nav_cache';
