@@ -31,13 +31,27 @@ GOOGLE_TAG_MANAGER = 'GTM-TBCDL49'
 DISQUS = 'ambivalent'
 
 # Settings for Service Worker
+# Enable extra templates in the theme
+TEMPLATE_EXTENSIONS = ['.html', '.js', '.webmanifest']
+DIRECT_TEMPLATES = [
+    'index', 'authors', 'categories', 'tags', 'archives',
+    'sw', 'app_manifest', 'offline',
+]
+
+SW_SAVE_AS = 'sw.js'
+SW_URL = SW_SAVE_AS
+
+APP_MANIFEST_SAVE_AS = 'app.webmanifest'
+APP_MANIFEST_URL = APP_MANIFEST_SAVE_AS
+
+OFFLINE_SAVE_AS = 'offline.html'
+OFFLINE_URL = OFFLINE_SAVE_AS
+
 from uuid import uuid4
-
-SERVICE_WORKER = 'sw.js'
-
-CACHE_VERSION = uuid4()
-OFFLINE_PAGE = '/offline.html'
-CONTENT_TO_CACHE = [
+# Remove other caches when there is a new APP_VERSION
+APP_VERSION = uuid4()
+# Tell our service worker what to pre-cache
+APP_SHELL = [   
   '/offline.html',
   '/app.webmanifest',
   'favicon.ico',
@@ -59,7 +73,6 @@ CONTENT_TO_CACHE = [
   '/theme/js/app.js',
 ]
 
-WEB_MANIFEST = 'app.webmanifest'
 WEB_MANIFEST_DESCR = 'Ambivalents live demo'
 WEB_MANIFEST_ICONS = [
     {
@@ -86,10 +99,6 @@ WEB_MANIFEST_ICONS = [
 
 APPLE_TOUCH_ICON = 'icon-192x192.png'
 
-TEMPLATE_PAGES = {
-    'templates/sw.js': SERVICE_WORKER,
-    'templates/app.webmanifest': WEB_MANIFEST,
-}
 
 # Pelican settings
 # Basic settings

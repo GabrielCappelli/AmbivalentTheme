@@ -1,0 +1,35 @@
+{% extends "/base.html" %}
+{% block title %}
+<title>{{ SITENAME }} - Offline</title>
+{% endblock title %}
+{% block main %}
+<article>
+    <h1>Whoops, seems like you're offline</h1>
+    <p>You can still read these pages that are cached:</p>
+    <ul id='cache-pages-list'>
+    </ul>
+</article>
+
+<script>
+    (async () => {
+        const cache_pages_list = document.getElementById('cache-pages-list');
+        const NAV_CACHE = 'nav_cache';
+        cache = await window.caches.open(NAV_CACHE);
+        const results = await cache.matchAll();
+        results.flat().forEach(async (response) => {
+            const dataAsString = await response.text();
+            const html = document
+                .createRange()
+                .createContextualFragment(dataAsString);
+            const title = html
+                .querySelector("title")
+                .textContent.trim();
+            cache_pages_list.insertAdjacentHTML(
+                "beforeend",
+                `<li><a href="${response.url}">${title}</a></li>`
+            );
+        });
+    })();
+</script>
+
+{% endblock main %}
